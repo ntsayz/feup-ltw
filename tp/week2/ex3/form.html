@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Form</title>
+   </head>
+   <body>
+    <form>
+        <fieldset>
+        <legend>Personal data</legend>
+        <label for="name">Name :</label>
+        <input id ="name" name="name" type="text" placeholder="Full name" required="required"><br>
+        
+        <label>Age :</label>
+        <input name="age" type="radio" value="18">18
+        <input  name="age" type="radio" value="19-35">19-35
+        <input  name="age" type="radio" value="36-48"> 36-48
+        <input  name="age" type="radio" value=">49">  > 49
+        
+        <br>
+        <label for="profession">Profession :</label>
+        <input id="profession" name="profession" list="professions" value="Student"><br><br>
+        <datalist id="professions">
+          <option>Engineer</option>
+          <option selected>Student</option>
+          <option>Janitor</option>
+          <option>Lawyer</option>
+          <option>Nurse</option>
+        </datalist>
+
+
+        <label for="country">Country :</label>
+        <select id="country" name="country" required>
+            <option value="">None</option>
+            <option value="pt" selected>Portugal</option>
+            <option value="mz">Mozambique</option>
+            <option value="es">Spain</option>
+            <option value="nl">Netherlands</option>
+          </select>
+          <br><br>
+
+
+          <label for="interest">
+            Interests : 
+        </label>
+        <select id="interest" name="interests" multiple>
+            <option value="1">Books</option>
+            <option value="2">Movies, Music & Games</option>
+            <option value="3">Electronics & Computers</option>
+            <option value="4">Home, Garden & Tools</option>
+            <option value="5">Health & Beauty</option>
+            <option value="6">Toys, Kids & Baby</option>
+            <option value="7">Clothing & Jewelry</option>
+            <option value="8">Sports & Outdoors</option>
+        </select>
+        <br><br>
+
+
+        <label for="wheredidyouhear">Where did you hear about us ?</label><br>
+        <textarea id="wheredidyouhear" name="wheredidyouhear" cols="30">
+
+        </textarea>
+          
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+   </body>
+</html>
