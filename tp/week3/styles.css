@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Imperial+Script&family=Ruda:wght@700&display=swap');
+h1{
+    font-family: 'Imperial Script', cursive;
+}
+h2{
+    font-family: 'Ruda' , sans-serif;
+    text-align: right;
+    border-bottom: solid;
+}
+p , li ,h4{
+    font-family: 'Crimson Pro', serif;
+    text-align: left;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.recipe-info{
+    border-color: rgba(220, 47, 47, 0.446);
+    border-style: dashed;
+    border-radius:10px;
+    border-right-style:solid;
+    border-right-width: 10px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    background-color: rgba(236, 10, 10, 0.177);
+    padding: 1em;
+}
+body{
+    margin : 0 auto;
+    width: 60%;
+    text-align: center;
+    
+}
+
+img{
+    height: auto;
+    max-width:95%;  
+}
+.ingredient{
+    color : rgb(70, 130, 70);
+}
