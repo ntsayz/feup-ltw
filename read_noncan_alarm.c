@@ -27,7 +27,7 @@
 volatile int STOP = FALSE;
 int alarmEnabled = FALSE;
 int alarmCount = 0;
-unsigned const int TIMETORUN = 3;
+unsigned const int TIMETORUN = 12;
 
 
 
@@ -100,7 +100,7 @@ int main(int argc, char *argv[])
     	unsigned char buf[BUF_SIZE + 1] = {0}; // +1: Save space for the final '\0' char
 	unsigned char  ua[5] = {0x7E,0x01,0x07,0x00,0x7E};
 	// to check if the SET frame is correct
-	unsigned char set[5] ;
+	unsigned char set[5];
 	// xor to calculate the bcc1 value
 	ua[3] = ua[1]^ua[2];
 	set[3] = set[1]^set[2];
@@ -117,7 +117,12 @@ int main(int argc, char *argv[])
 
 	if(set[4]==ua[4] && set[0] == ua[0] && bcc_set == set[3] ){
 		printf("array is correct");
-		int bytes1 = write(fd,ua,sizeof(ua));
+		set[0] = 0;
+		set[1] = 0;
+		set[2] = 0;
+		set[3] = 0;
+		set[4] = 0;
+		//int bytes1 = write(fd,ua,sizeof(ua));
 	}
 
 	//alarm
